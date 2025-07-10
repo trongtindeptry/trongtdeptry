@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Công ty TNHH Khí Công Nghiệp Trọng Tín - Đơn vị chuyên cung cấp khí công nghiệp, khí y tế và dịch vụ liên quan.">
+  <title>Trọng Tín INDUSTRIAL GAS - Nhà cung cấp khí công nghiệp hàng đầu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #004080;
+      --secondary-color: #0066cc;
+      --accent-color: #ffd700;
+      --text-color: #333;
+      --light-bg: #f8f9fa;
+      --white: #ffffff;
+      --dark-blue: #003366;
+      --transition: all 0.3s ease;
+      --box-shadow: 0 5px 15px rgba(0, 64, 128, 0.1);
+      --border-radius: 8px;
+    }
+    .industrial-gases {
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.gas-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.gas-card h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+.dual-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0;
+}
+.dual-img img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.gas-card p {
+  color: #555;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.gas-card i {
+  margin-right: 10px;
+}
+  .custom-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .image-placeholder:hover .custom-image {
+    transform: scale(1.05);
+  }
+  
+  .image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 64, 128, 0.7);
+    color: white;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .application-desc {
+    background: #e7f0ff;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .application-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .image-placeholder {
+      height: 250px;
+    }
+  }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+      background-color: var(--light-bg);
+      overflow-x: hidden;
+    }
+
+  .glowing-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+    display: inline-block;
+    padding: 0x 20px;
+    border-radius: 8px;
+  }
+  
+  .glowing-heading:hover {
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .glowing-heading:hover:before {
+    opacity: 1;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .glowing-heading {
+      font-size: 1.8rem;
+      padding: 10px 18px;
+    }
+  }
+    /* ============ HEADER STYLES ============ */
+    header {
+      background-color: var(--primary-color);
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .brand-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .logo-img {
+      height: 80px;
+      width: 80px;
+      object-fit: contain;
+      transition: var(--transition);
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    .company-name {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      color: var(--white);
+      margin: 0;
+      text-align: center;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      transition: var(--transition);
+    }
+
+    .company-name:hover {
+      color: var(--accent-color);
+    }
+
+    /* ============ NAVIGATION ============ */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      padding: 8px 12px;
+      border-radius: var(--border-radius);
+      position: relative;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent-color);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-color);
+      transition: var(--transition);
+      transform: translateX(-50%);
+    }
+
+    nav ul li a:hover::after {
+      width: 80%;
+    }
+
+    /* ============ MAIN CONTENT ============ */
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============ HERO SECTION ============ */
+    .hero {
+      position: relative;
+      height: 500px;
+      background: linear-gradient(135deg, var(--secondary-color), var(--dark-blue));
+      color: var(--white);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 40px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('webbb/industry-bg.jpg') center/cover no-repeat;
+      opacity: 0.2;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: slideInDown 1s ease;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      animation: slideInUp 1s ease;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: var(--dark-blue);
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      background-color: #ffc800;
+    }
+
+    /* ============ SECTIONS COMMON STYLES ============ */
+    section {
+      margin-top: 60px;
+      padding: 40px;
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 64, 128, 0.15);
+    }
+
+    section h2 {
+      color: var(--primary-color);
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+
+    /* ============ ABOUT SECTION ============ */
+     .about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .animated-text {
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .animated-text:before {
+    content: "•";
+    color: #0066cc;
+    position: absolute;
+    left: 0;
+  }
+  
+  .highlight-word {
+    color: #004080;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .highlight-word:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #ffd700, #0066cc);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .highlight-word:hover {
+    color: #0066cc;
+  }
+  
+  .highlight-word:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+    .about-image {
+      flex: 1;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .about-image:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ============ SERVICES SECTION ============ */
+    .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cột bằng nhau */
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .service-card {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 64, 128, 0.1);
+    height: 100%; /* Đảm bảo chiều cao bằng nhau */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+    color: #004080;
+    margin-bottom: 20px;
+    background: rgba(0, 64, 128, 0.1);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-card h3 {
+    color: #004080;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    flex-grow: 1;
+  }
+
+  .service-card p {
+    margin-bottom: 0;
+  }
+
+  /* Responsive cho mobile */
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr; /* 1 cột trên mobile */
+    }
+  }
+
+    /* ============ PRODUCTS SECTION ============ */
+    .product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .product-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .product-item {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 20px;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+      border: 1px solid rgba(0, 64, 128, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 64, 128, 0.2);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--accent-color);
+      color: var(--dark-blue);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      transition: var(--transition);
+    }
+
+    .product-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .product-item p {
+      font-size: 1rem;
+      color: var(--text-color);
+      margin-bottom: 15px;
+    }
+
+    .product-price {
+      font-weight: bold;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+     .centered {
+    padding: 0 15%; /* Căn giữa 2 sản phẩm */
+  }
+
+    /* ============ TESTIMONIALS SECTION ============ */
+    .testimonials {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      color: var(--white);
+    }
+
+    .testimonials h2::after {
+      background-color: var(--accent-color);
+    }
+
+    .testimonial-slider {
+      max-width: 800px;
+      margin: 40px auto 0;
+      position: relative;
+    }
+
+    .testimonial-item {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      margin: 0 15px;
+      display: none;
+    }
+
+    .testimonial-item.active {
+      display: block;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .testimonial-author span {
+      display: block;
+      font-weight: normal;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-top: 5px;
+    }
+
+    .slider-controls {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .slider-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .slider-dot.active {
+      background-color: var(--accent-color);
+      transform: scale(1.2);
+    }
+
+    /* ============ CONTACT SECTION ============ */
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .contact-icon {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-top: 3px;
+    }
+
+    .contact-text h3 {
+      color: var(--primary-color);
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+
+    .contact-text a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .contact-text a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    .contact-form {
+      background-color: var(--light-bg);
+      padding: 30px;
+      border-radius: var(--border-radius);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(0, 64, 128, 0.2);
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background-color: var(--primary-color);
+      color: var(--white);
+      border: none;
+      padding: 12px 25px;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 60px 20px 30px;
+      margin-top: 80px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--accent-color);
+    }
+
+    .footer-column p {
+      margin-bottom: 15px;
+      opacity: 0.9;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--white);
+      text-decoration: none;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-color);
+      padding-left: 5px;
+    }
+
+    .footer-links i {
+      font-size: 0.8rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: var(--white);
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background-color: var(--accent-color);
+      color: var(--dark-blue);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* ============ BACK TO TOP BUTTON ============ */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary-color);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+
+    /* ============ RESPONSIVE STYLES ============ */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      
+      .about-content {
+        flex-direction: column;
+      }
+      
+      .about-image {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .brand-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .logo-img {
+        height: 60px;
+        width: 60px;
+      }
+
+      .company-name {
+        font-size: 1.6rem;
+      }
+
+      .hero {
+        height: 400px;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      section {
+        padding: 30px 20px;
+      }
+      
+      section h2 {
+        font-size: 1.8rem;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        height: 350px;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+
+      .product-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============ MOBILE MENU ============ */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--white);
+      transition: var(--transition);
+      z-index: 1001;
+    }
+
+    .menu-toggle:hover {
+      color: var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+      }
+
+      nav {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        opacity: 0;
+        transition: var(--transition);
+        z-index: 999;
+      }
+
+      nav.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul li a {
+        padding: 12px 15px;
+        display: block;
+        border-radius: var(--border-radius);
+        text-align: center;
+      }
+
+      nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      nav ul li a::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand-container">
+      <img src="logoooo-Photoroom.jpg" class="logo-img" alt="Logo Trọng Tín">
+      <h1 class="company-name">KHÍ CÔNG NGHIỆP TRỌNG TÍN</h1>
+    </div>
+    
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#trang-chu">Trang chủ</a></li>
+        <li><a href="#gioi-thieu">Giới thiệu</a></li>
+        <li><a href="#san-pham">Sản phẩm</a></li>
+        <li><a href="#dich-vu">Dịch vụ</a></li>
+        <li><a href="#lien-he">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main></main>
+    <!-- Hero Section -->
+    <section class="hero" id="trang-chu">
+      <div class="hero-content">
+        <h1 class="glowing-heading">Đơn Vị Chuyên Cung Cấp Khí Công Nghiệp Và Oxy Y Tế</h1>
+        <p>Khí Công Nghiệp Trọng Tín - Đơn vị hàng đầu cung cấp các loại khí phục vụ trong Y Tế và Công Nghiệp với chất lượng vượt trội và dịch vụ chuyên nghiệp.<br> Hotline: 0904538335-0374366335</p>
+         <a href="#lien-he" class="cta-button">Liên hệ ngay</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="gioi-thieu" class="about">
+      <h2>Về Chúng Tôi</h2>
+      <div class="about-content">
+        <div class="about-text">
+         <div class="about-text">
+  <p class="animated-text"><span class="highlight-word">Công ty TNHH Khí Công Nghiệp Trọng Tín</span> là đơn vị <span class="highlight-word">uy tín hàng đầu</span> trong lĩnh vực cung cấp khí công nghiệp và y tế tại Việt Nam.</p>
+  
+  <p class="animated-text">Tác phong làm việc <span class="highlight-word">chuyên nghiệp</span>,<span class="highlight-word"></span>cùng hệ thống <span class="highlight-word">vận hành hiện đại</span>, chúng tôi cam kết cung cấp giải pháp toàn diện về khí công nghiệp cho mọi nhu cầu của khách hàng.</p>
+  
+  <p class="animated-text">Chúng tôi không ngừng <span class="highlight-word">cải tiến</span> để mang lại giá trị tốt nhất cho khách hàng thông qua <span class="highlight-word">chất lượng sản phẩm</span>, dịch vụ <span class="highlight-word">tận tâm ,giá cả</span> cạnh tranh.</p>
+</div>
+        <div class="about-image">
+          <img src="oxy.jpg" alt="Về công ty Trọng Tín">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="dich-vu" class="services">
+  <h2>Dịch Vụ Của Chúng Tôi</h2>
+  <div class="services-grid">
+    <!-- Hàng 1 -->
+    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="service-icon">
+        <i class="fas fa-fire-extinguisher"></i>
+      </div>
+      <h3>Cung cấp khí công nghiệp & Oxy y tế</h3>
+      <p>Cung cấp đa dạng các loại khí công nghiệp như: Oxygen, CO2, Argon, Acetylene(Gió đá), Nitrogen, khí y tế với chất lượng đảm bảo, nguồn gốc rõ ràng, an toàn sử dụng.</p>
+    </div>
+    
+    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="service-icon">
+        <i class="fas fa-truck"></i>
+      </div>
+      <h3>Giao hàng tận nơi</h3>
+      <p>Dịch vụ giao hàng nhanh chóng, tiện lợi, chuyên nghiệp, đúng hẹn đến mọi công trình, nhà máy, bệnh viện.</p>
+    </div>
+    
+    <!-- Hàng 2 -->
+    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="service-icon">
+        <i class="fas fa-exchange-alt"></i>
+      </div>
+      <h3>Cho thuê & nạp khí</h3>
+      <p>Cho thuê bình khí các loại và dịch vụ nạp khí vào bình theo yêu cầu của khách hàng.</p>
+    </div>
+    
+    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="service-icon">
+        <i class="fas fa-phone-volume"></i>
+      </div>
+      <h3>Tư vấn & lắp đặt</h3>
+      <p>Tư vấn, hỗ trợ khách hàng trong việc sử dụng và bảo hành sản phẩm.</p>
+    </div>
+  </div>
+</section>
+
+    <!-- Products Section -->
+    <!--Hàng 1 - 3 sản phẩm-->
+    <section id="san-pham" class="products">
+      <h2>Sản phẩm của chúng tôi</h2>
+      <div class="product-list" class="product-grid">
+        <div class="product-item">
+          <img src="khí co2.png" alt="Khí CO2" />
+          <h3>Khí CO2</h3>
+          <p>Khí CO₂ được dùng làm khí bảo vệ trong hàn cắt kim loại, giúp ngăn oxy hóa và ổn định hồ quang. Nhờ đó, mối hàn đạt độ bền cao và chất lượng tốt, đồng thời CO₂ có chi phí thấp nên được sử dụng phổ biến trong hàn MIG.</p>
+           <a href="#lien-he"><div class="product-price">Liên hệ</div></a>
+        </div>
+        <div class="product-item">
+          <img src="khí oxy.png" alt="Khí Oxygen" />
+          <h3>Khí Oxygen</h3>
+          <p>Khí oxy chất lượng cao phục vụ cho các nhu cầu y tế và công nghiệp. Oxy y tế đạt tiêu chuẩn Bộ Y tế, oxy công nghiệp đảm bảo độ tinh khiết cao cho các ứng dụng công nghiệp.</p>
+          <a href="#lien-he"><div class="product-price">Liên hệ</div></a>
+        </div>
+        <div class="product-item">
+          <img src="khí nitrogen.png" alt="Khí nito" />
+          <h3>Khí Nitrogen</h3>
+          <p>Khí Nitrogen phục vụ cho việc bảo vệ mối hàn hoặc cắt bằng laser, ngăn ngừa oxy hóa các linh kiện trong công nghiệp. Độ tinh khiết cao, đảm bảo chất lượng cho các quy trình sản xuất.</p>
+          <a href="#lien-he"><div class="product-price">Liên hệ</div></a>
+        </div>
+        <!--Hàng 2 - 2 sản phẩm-->
+        <div class="product-item" class="product-row centered">
+          <img src="khí argon.png" alt="Khí Argon"/>
+          <h3>Khí Argon</h3>
+          <p>Khí Argon thường được dùng làm khí bảo vệ trong hàn kim loại, đặc biệt là hàn TIG và MIG, để ngăn oxy hóa mối hàn. Độ tinh khiết cao, phù hợp cho các ứng dụng đòi hỏi chất lượng cao.</p>
+          <a href="#lien-he"><div class="product-price">Liên hệ</div></a>
+        </div>
+        <div class="product-item">
+          <img src="khí Acetylene.png" alt="Khí Acetylene"/>
+          <h3>Khí Acetylene (Gió đá)</h3>
+          <p>Khí acetylene được sử dụng chủ yếu trong công nghiệp để hàn và cắt kim loại nhờ khả năng tạo ngọn lửa có nhiệt độ cao khi cháy với oxy. Đây là loại khí sinh nhiệt lớn, thích hợp cho các công việc cần nhiệt độ cao.</p>
+          <a href="#lien-he"><div class="product-price">Liên hệ</div></a>
+        </div>
+    </section>
+       <section class="industrial-gases">
+      <h2>ỨNG DỤNG THỰC TẾ CỦA CÁC LOẠI KHÍ</h2>
+  <!-- KHÍ OXY -->
+  <div class="gas-card">
+    <h3><i class="fas fa-lungs"></i> KHÍ OXY</h3>
+    <div class="app-group">
+      <div class="app-item">
+        <div class="dual-img">
+          <img src="anh2.png" alt="Oxy y tế">
+          <img src="anh1.png" alt="Oxy Công Nghiệp">
+        </div>
+        <p>
+<strong>Trong lĩnh vực Y TẾ:</strong>
++Hỗ trợ hô hấp: Cung cấp oxy cho bệnh nhân suy hô hấp, ngạt thở qua mặt nạ hoặc ống thở<br>
++Cấp cứu khẩn cấp: Sử dụng trong xe cứu thương, phòng mổ <br>
++Liệu pháp oxy cao áp: Điều trị ngộ độc CO, hoại tử mô, vết thương khó lành<br>
++Hồi sức tim phổi: Kết hợp với máy thở trong các ca cấp cứu<br>
++Gây mê: Phối hợp với các loại khí khác trong phẫu thuật<br>
+<strong>Trong lĩnh vực CÔNG NGHIỆP</strong>
++Hàn cắt kim loại: Sử dụng trong hàn oxy-axetilen đạt nhiệt độ lên tới 3,500°C<br>
++Luyện thép: Tăng hiệu suất sản xuất thép trong lò luyện<br>
++Sản xuất hóa chất: Oxy hóa trong quá trình sản xuất nhựa, methanol, ethylene oxide<br>
++Xử lý nước: Tăng hiệu quả xử lý nước thải công nghiệp<br>
++Công nghệ hàn: Hàn hồ quang dưới khí bảo vệ (MIG/MAG)<br>
++Đốt nhiên liệu: Tăng hiệu suất đốt trong lò nung, lò đốt rác<br>
+<strong><em>Khí Công Nghiệp Trọng Tín luôn mang đến cho quý khách những sản phẩm chất lượng cao với độ uy tín tuyệt đối. Chúng tôi luôn sẵn sàng cung cấp cho quý khách hàng các bình oxy phục vụ cho y tế, công nghiệp với dung tích 8L, 10L, 14L, 40L, 47L, 50L cùng theo đó là độ tinh khiết đến 99,9%, mọi sản phẩm của Khí Công Nghiệp Trọng Tín đều được qua đơn vị có uy tín kiểm định an toàn sử dụng. Không chỉ thế chúng tôi còn có hàng loạt dịch vụ chất lượng khác, nếu có nhu cầu Quý khách vui lòng liên hệ Hotline: 0374366335-0904538335 để được giao hàng nhanh trong 24H.Trân trọng Quý khách hàng đã tin tưởng.</em></strong>
+</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- KHÍ CO2 -->
+  <div class="gas-card">
+    <h3><i class="fas fa-fire-extinguisher"></i> KHÍ CO2</h3>
+    <div class="app-group">
+      <div class="app-item">
+        <div class="dual-img">
+          <img src="hàn khí.png" alt="Nước có gas">
+          <img src="bình co2.png" alt="Chữa cháy">
+        </div>
+        <p><strong>ỨNG DỤNG TRONG CÔNG NGHIỆP</strong> <br>
+<strong><i>1.1 Hàn công nghiệp (Hàn MAG)</i></strong><br>
++CO₂ được sử dụng như khí bảo vệ trong hàn kim loại<br>
++Ngăn chặn quá trình oxy hóa mối hàn<br>
++Giúp mối hàn sạch, ít bắn tóe<br>
++Tiết kiệm chi phí so với khí trộn Argon<br>
+<strong><i>1.2 Hệ thống làm lạnh</i></strong>
++Làm lạnh nhanh trong sản xuất linh kiện điện tử<br>
++Ứng dụng trong hệ thống điều hòa không khí công nghiệp<br>
++Làm mát máy biến áp, động cơ công suất lớn<br>
+<strong><i>1.3 Sản xuất vật liệu xốp</i></strong><br>
++Tạo bọt khí trong sản xuất foam cách nhiệt<br>
++Ứng dụng trong sản xuất mút xốp, đệm ghế<br>
++Thân thiện môi trường hơn so với chất tạo bọt truyền thống<br>
+<strong>2. ỨNG DỤNG TRONG Y TẾ</strong><br>
+<strong><i>2.1 Phẫu thuật nội soi</i></strong><br>
++Tạo khoang làm việc trong phẫu thuật ổ bụng<br>
++Duy trì áp suất ổn định từ 12-15 mmHg<br>
++Giúp bác sĩ quan sát rõ hơn khi mổ<br>
+<strong><i>2.2 Bảo quản y tế</i></strong><br>
++Bảo quản tế bào, mô trong nitơ lỏng (-196°C)<br>
++Vận chuyển nội tạng cấy ghép<br>
++Ứng dụng trong ngân hàng tế bào gốc<br>
+<strong><i>2.3 Trị liệu y khoa</i></strong><br>
++Điều trị suy hô hấp cấp tính<br>
++Liệu pháp tắm CO₂ cho bệnh nhân tim mạch<br>
++Hỗ trợ trong vật lý trị liệu phục hồi chức năng<br>
+<strong>3. ỨNG DỤNG TRONG THỰC PHẨM</strong><br>
+<strong><i>3.1 Đóng gói khí trì (MAP)</i></strong><br>
++Kéo dài thời gian bảo quản thịt, cá tươi<br>
++Giữ màu sắc tự nhiên của thực phẩm<br>
++Ức chế vi khuẩn hiếu khí phát triển<br>
+<strong><i>3.2 Sản xuất đồ uống</i></strong><br>
++Tạo gas trong nước ngọt, bia<br>
++Điều chỉnh độ pH trong quá trình lên men<br>
++Giữ hương vị tự nhiên của sản phẩm<br>
+<strong><i>3.3 Công nghệ đông lạnh</i></strong><br>
++Đông khô thực phẩm cao cấp<br>
++Làm lạnh nhanh trong sản xuất kem<br>
++Bảo quản trái cây xuất khẩu<br>
+<strong><em>Khí Công Nghiệp Trọng Tín luôn mang đến cho quý khách những sản phẩm chất lượng cao với độ uy tín tuyệt đối. Chúng tôi luôn sẵn sàng cung cấp cho quý khách hàng các bình CO2 phục vụ cho y tế, công nghiệp, thực phẩm với dung tích 8L, 10L, 14L, 40L, 47L, 50L cùng theo đó là độ tinh khiết đến 99,99%, mọi sản phẩm của Khí Công Nghiệp của Trọng Tín đều được qua đơn vị có uy tín kiểm định đủ tiêu chuẩn an toàn sử dụng. Không chỉ thế chúng tôi còn có hàng loạt dịch vụ chất lượng khác, nếu có nhu cầu Quý khách vui lòng liên hệ Hotline: 0374366335-0904538335 để được giao hàng nhanh trong 24H.Trân trọng Quý khách hàng đã tin tưởng.</em></strong>
+</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- KHÍ NITROGEN -->
+  <div class="gas-card">
+    <h3><i class="fas fa-atom"></i> KHÍ NITROGEN</h3>
+    <div class="app-group">
+      <div class="app-item">
+        <div class="dual-img">
+          <img src="cnc.png" alt="Cắt laser trong công nghiệp">
+          <img src="ung dung nitro.png" alt="Sản xuất chip">
+        </div>
+        <p><strong>ỨNG DỤNG KHÍ NITO (N₂) TRONG CÔNG NGHIỆP</strong><br>
+<strong><i>1. Ngành điện tử & vi mạch</i></strong><br>
++Bảo vệ linh kiện: Tạo môi trường trơ khi sản xuất chip, PCB<br>
++Làm sạch: Thổi bụi trong dây chuyền lắp ráp linh kiện<br>
++Đóng gói: Ngăn oxy hóa linh kiện nhạy cảm<br>
+<strong><i>2. Luyện kim & xử lý nhiệt</i></strong><br>
++Ủ thép: Giảm ứng suất vật liệu sau gia công<br>
++Nhiệt luyện: Ngăn cháy bề mặt kim loại ở nhiệt độ cao<br>
++Hàn laser: Bảo vệ mối hàn khỏi khí oxy<br>
+<strong><i>3. Dầu khí & hóa chất</i></strong><br>
++Làm sạch đường ống: Đẩy khí dư thừa trước khi hàn<br>
++Kiểm tra rò rỉ: Phát hiện điểm hở trong hệ thống kín<br>
++Bảo quản hóa chất: Ngăn phản ứng oxy hóa nguy hiểm<br>
+<strong><i>4. Sản xuất & đóng gói</i></strong><br>
++Tạo áp suất: Vận hành hệ thống thủy lực<br>
++Đóng gói nhựa: Ngăn biến dạng sản phẩm khi ép phun<br>
++In ấn: Làm khô mực nhanh<br>
+<strong><em>Khí Công Nghiệp Trọng Tín luôn mang đến cho quý khách những sản phẩm chất lượng cao với độ uy tín tuyệt đối. Chúng tôi luôn sẵn sàng cung cấp cho quý khách hàng các bình Nitroge phục vụ cho y tế, công nghiệp, thực phẩm, hàn cắt kim loại với dung tích 14L, 40L, 47L, 50L cùng theo đó là độ tinh khiết đến 99,8%, mọi sản phẩm của Khí Công Nghiệp của Trọng Tín đều được qua đơn vị có uy tín kiểm định đủ tiêu chuẩn an toàn sử dụng. Không chỉ thế chúng tôi còn có hàng loạt dịch vụ chất lượng khác, nếu có nhu cầu Quý khách vui lòng liên hệ Hotline: 0374366335-0904538335 để được giao hàng nhanh trong 24H.Trân trọng Quý khách hàng đã tin tưởng.</em></strong>
+</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- KHÍ ARGON -->
+  <div class="gas-card">
+    <h3><i class="fas fa-wind"></i> KHÍ ARGON</h3>
+    <div class="app-group">
+      <div class="app-item">
+        <div class="dual-img">
+          <img src="argon.png" alt="Hàn argon">
+          <img src="bình argon.png" alt="Bóng đèn">
+        </div>
+        <p><strong>ỨNG DỤNG KHÍ ARGON (Ar) TRONG CÁC LĨNH VỰC</strong><br>
+<strong><i>1. Công nghiệp Hàn & Luyện kim</i></strong><br>
++Hàn TIG/MIG: Bảo vệ mối hàn nhôm, inox, kim loại màu khỏi oxy hóa<br>
++Luyện thép: Ngăn chặn khí oxy tiếp xúc với kim loại nóng chảy<br>
++Sản xuất bóng đèn: Tạo môi trường trơ kéo dài tuổi thọ dây tóc<br>
+<strong><i>2. Ngành Điện tử & Bán dẫn</i></strong><br>
++Sản xuất chip: Bảo vệ wafer silicon trong quá trình epitaxy<br>
++Lắp đặt vi mạch: Ngăn chặn hiện tượng oxy hóa bề mặt<br>
++Màn hình LCD: Lớp bảo vệ trong sản xuất panel<br>
+<strong><i>3. Y tế & Khoa học</i></strong><br>
++Phẫu thuật laser: Làm mát và bảo vệ vết mổ<br>
++MRI: Duy trì từ trường trong máy chụp cộng hưởng từ<br>
++Nghiên cứu: Môi trường trơ cho các thí nghiệm hóa học<br>
+<strong><i>4. Thực phẩm & Đồ uống</i></strong><br>
++Đóng gói rượu vang: Ngăn oxy làm hỏng hương vị<br>
++Bảo quản thực phẩm cao cấp: Kéo dài thời hạn sử dụng<br>
+<strong><i>5. Năng lượng & Môi trường</i></strong><br>
++Pin năng lượng: Thành phần trong pin lithium-ion<br>
++Xử lý chất thải: Khí mang trong sắc ký khí
+<strong><em>Khí Công Nghiệp Trọng Tín luôn mang đến cho quý khách những sản phẩm chất lượng cao với độ uy tín tuyệt đối. Chúng tôi luôn sẵn sàng cung cấp cho quý khách hàng các bình Argon phục vụ cho y tế, công nghiệp, thực phẩm, công trình, Viện nghiên cứu với dung tích 14L, 40L, 47L, 50L cùng theo đó là độ tinh khiết đến 99,8%, mọi sản phẩm của Khí Công Nghiệp của Trọng Tín đều được qua đơn vị có uy tín kiểm định đủ tiêu chuẩn an toàn sử dụng. Không chỉ thế chúng tôi còn có hàng loạt dịch vụ chất lượng khác, nếu có nhu cầu Quý khách vui lòng liên hệ Hotline: 0374366335-0904538335 để được giao hàng nhanh trong 24H.Trân trọng Quý khách hàng đã tin tưởng.</em></strong>
+</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- KHÍ ACETYLENE -->
+  <div class="gas-card">
+    <h3><i class="fas fa-fire"></i> KHÍ ACETYLENE</h3>
+    <div class="app-group">
+      <div class="app-item">
+        <div class="dual-img">
+          <img src="han tau.png" alt="Cắt kim loại">
+          <img src="acetylene.png" alt="Hàn kim loại">
+        </div>
+        <p><strong>ỨNG DỤNG CỦA KHÍ ACETYLENE (C₂H₂) TRONG CÔNG NGHIỆP</strong><br>
+<strong><i>1. Hàn & Cắt Kim Loại</i></strong><br>
++Hàn gió đá (Oxy-Acetylene):<br>
++Đạt nhiệt độ lên đến 3,500°C, phù hợp hàn thép dày<br>
++Ứng dụng: Sửa chữa ống dẫn, khung máy, kết cấu thép<br>
++Cắt kim loại:<br>
++Cắt phôi thép, tấm kim loại dày trong xây dựng và đóng tàu<br>
++Ưu điểm: Độ chính xác cao, chi phí thấp<br>
+<strong><i>2. Công Nghiệp Hóa Chất</i></strong><br>
++Nguyên liệu sản xuất:<br>
++Nhựa PVC (qua trung gian Vinyl Chloride)<br>
++Cao su tổng hợp, sợi nhân tạo<br>
++Tổng hợp hữu cơ: Sản xuất ethanol, acetaldehyde<br>
++Làm sạch: Loại bỏ gỉ sắt, lớp phủ bề mặt trước khi sơn<br>
++Tôi bề mặt: Tăng độ cứng cho chi tiết máy<br>
+<strong><i>4. Ngành Luyện Kim</i></strong><br>
++Luyện thép: Khử oxy trong quá trình sản xuất thép chất lượng cao<br>
++Nhiệt luyện: Xử lý nhiệt cho bề mặt kim loại<br>
+<strong><em>Khí Công Nghiệp Trọng Tín luôn mang đến cho quý khách những sản phẩm chất lượng cao với độ uy tín tuyệt đối. Chúng tôi luôn sẵn sàng cung cấp cho quý khách hàng các bình Acetylene phục vụ cho các Viện nghiên cứu, công nghiệp, công trình,với dung tích 12L, 40L với độ tinh khiết cao, mọi sản phẩm của Khí Công Nghiệp của Trọng Tín đều được qua đơn vị có uy tín kiểm định đủ tiêu chuẩn an toàn sử dụng. Không chỉ thế chúng tôi còn có hàng loạt dịch vụ chất lượng khác, nếu có nhu cầu Quý khách vui lòng liên hệ Hotline: 0374366335-0904538335 để được giao hàng nhanh trong 24H.Trân trọng Quý khách hàng đã tin tưởng.</em></strong>
+</p>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Contact Section -->
+    <section id="lien-he" class="contact">
+      <h2>Liên Hệ Với Chúng Tôi</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Địa chỉ</h3>
+              <p><strong>1-2 Võ Văn Vân, Tân Vĩnh Lộc, TP.HCM</strong></p>
+              <p><strong>E36/66 Đinh Văn Ước, ấp 5, xã Hưng Long, TP.HCM</strong></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Điện thoại</h3>
+              <p><a href="tel:0904538335">0904 538 335</a></p>
+              <p><a href="tel:0374366335">0374 366 335</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Email</h3>
+              <p><a href="mailto:khicongnghieptt07.com">khicongnghieptt07@gmail.com</a></p>
+              <p><a
